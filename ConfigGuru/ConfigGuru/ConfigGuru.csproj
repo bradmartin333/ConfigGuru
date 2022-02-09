@@ -5,6 +5,11 @@
     <TargetFramework>net472</TargetFramework>
     <UseWindowsForms>true</UseWindowsForms>
     <StartupObject>ConfigGuru.Program</StartupObject>
+    <ApplicationIcon>CG.ico</ApplicationIcon>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="CG.ico" />
+  </ItemGroup>
 
 </Project>

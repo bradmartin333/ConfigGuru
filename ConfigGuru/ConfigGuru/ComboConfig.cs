@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using System.Windows.Forms;
 using System.Xml.Linq;
 
@@ -22,6 +23,12 @@ namespace ConfigGuru
             XDocument config = XDocument.Load(MAIN.PATH);
             config.Descendants().Elements("ChuckConfig").Single().Value = COMBO.Text;
             config.Save(MAIN.PATH);
+        }
+
+        public void Reload()
+        {
+            XDocument config = XDocument.Load(MAIN.PATH);
+            COMBO.Text = config.Descendants().Elements("ChuckConfig").Single().Value;
         }
     }
 }

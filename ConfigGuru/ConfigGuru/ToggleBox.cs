@@ -35,5 +35,11 @@ namespace ConfigGuru
             config.Descendants().Elements(AccessibleName).Single().Value = CBX.Text.ToLower();
             config.Save(MAIN.PATH);
         }
+
+        public void Reload()
+        {
+            XDocument config = XDocument.Load(MAIN.PATH);
+            Toggle(Convert.ToBoolean(config.Descendants().Elements(AccessibleName).Single().Value));
+        }
     }
 }

@@ -29,7 +29,7 @@ namespace ConfigGuru
                 if ((new string[] { "true", "false" }).Contains(element.Value.ToLower()))
                 {
                     TLP.RowCount += 1;
-                    TLP.RowStyles.Add(new RowStyle(SizeType.Absolute, 30));
+                    TLP.RowStyles.Add(new RowStyle(SizeType.Absolute, 27));
                     TLP.Controls.Add(new Label()
                         {
                             Text = element.Name.ToString(),
@@ -48,13 +48,14 @@ namespace ConfigGuru
             TLP.RowStyles.Add(new RowStyle(SizeType.AutoSize));
             Label footer = new Label()
             {
-                Text = "github.com/bradmartin333/ConfigGuru",
+                Text = "ChuckConfig",
                 Dock = DockStyle.Fill,
-                TextAlign = ContentAlignment.BottomLeft,
+                TextAlign = ContentAlignment.MiddleLeft,
                 AutoSize = true,
             };
-            TLP.SetColumnSpan(footer, 2);
             TLP.Controls.Add(footer, 0, TLP.RowCount - 1);
+
+            TLP.Controls.Add(new ComboConfig(this) { Dock = DockStyle.Fill }, 1, TLP.RowCount - 1);
 
             LOADING = false;
         }

@@ -45,7 +45,7 @@ namespace ConfigGuru
             this.CBX.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CBX.Location = new System.Drawing.Point(0, 0);
             this.CBX.Name = "CBX";
-            this.CBX.Size = new System.Drawing.Size(100, 30);
+            this.CBX.Size = new System.Drawing.Size(100, 27);
             this.CBX.TabIndex = 0;
             this.CBX.Text = "False";
             this.CBX.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -54,11 +54,11 @@ namespace ConfigGuru
             // 
             // ToggleBox
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.CBX);
             this.Name = "ToggleBox";
-            this.Size = new System.Drawing.Size(100, 30);
+            this.Size = new System.Drawing.Size(100, 27);
             this.ResumeLayout(false);
             this.PerformLayout();
 

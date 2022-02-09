@@ -1,4 +1,6 @@
-﻿namespace ConfigGuru
+﻿using System.Windows.Forms;
+
+namespace ConfigGuru
 {
     partial class ToggleBox
     {

@@ -1,3 +1,8 @@
+using System;
+using System.Drawing;
+using System.IO;
+using System.Linq;
+using System.Windows.Forms;
 using System.Xml.Linq;
 
 namespace ConfigGuru
@@ -41,7 +46,7 @@ namespace ConfigGuru
 
             TLP.RowCount += 1;
             TLP.RowStyles.Add(new RowStyle(SizeType.AutoSize));
-            Label footer = new()
+            Label footer = new Label()
             {
                 Text = "github.com/bradmartin333/ConfigGuru",
                 Dock = DockStyle.Fill,

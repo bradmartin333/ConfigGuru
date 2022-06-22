@@ -74,6 +74,21 @@ namespace ConfigGuru
                 }
             }
 
+            if (config.Descendants().Elements("RGBCOMPort").Any())
+            {
+                TLP.RowCount += 1;
+                TLP.RowStyles.Add(new RowStyle(SizeType.Absolute, 27));
+                TLP.Controls.Add(new Label()
+                {
+                    Text = "RGBW HiMag",
+                    Dock = DockStyle.Fill,
+                    TextAlign = ContentAlignment.MiddleLeft,
+                    AutoSize = true,
+                },
+                        0, TLP.RowCount - 1);
+                TLP.Controls.Add(new ToggleBox(this, rgbw: true), 1, TLP.RowCount - 1);
+            }
+
             TLP.RowCount += 1;
             TLP.RowStyles.Add(new RowStyle(SizeType.AutoSize));
             Label footer = new Label()
